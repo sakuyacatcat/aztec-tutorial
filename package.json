@@ -1,0 +1,23 @@
+{
+  "name": "aztec-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "yarn clean && tsc -b",
+    "build:dev": "tsc -b --watch",
+    "clean": "rm -rf ./dest tsconfig.tsbuildinfo",
+    "start": "yarn build && DEBUG='token' node ./dest/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aztec/accounts": "^0.20.0",
+    "@aztec/aztec.js": "^0.20.0",
+    "@aztec/noir-contracts": "^0.20.0",
+    "@types/node": "^20.11.10",
+    "typescript": "^5.3.3"
+  }
+}
